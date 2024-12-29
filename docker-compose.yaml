@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  mongo-db:
+    image: mongo
+    restart: always
+    ports:
+      - 27017:27017
+    environment:
+      MONGODB_DATABASE: nest-pokemon
+    container_name: nest-pokemon
+    volumes:
+      - ./mongo:/data/db
